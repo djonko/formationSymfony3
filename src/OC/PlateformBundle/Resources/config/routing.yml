@@ -1,10 +1,10 @@
-oc_plateform_home:
+oc_platform_home:
     path: /{page}
     defaults: { _controller: OCPlateformBundle:Advert:index, page: 1}
     requirements:
-      page: \d+
+      page: \d*
 
-oc_plateform_view:
+oc_platform_view:
    path: /advert/{id}
    defaults: { _controller: OCPlateformBundle:Advert:view }
    requirements:
@@ -12,7 +12,7 @@ oc_plateform_view:
 
 oc_plateform_add:
    path: /add
-   defaults: { _controller: OCPlateformBundle:Advert:view }
+   defaults: { _controller: OCPlateformBundle:Advert:add }
 
 oc_platform_edit:
     path:      /edit/{id}
@@ -27,7 +27,6 @@ oc_platform_delete:
       _controller: OCPlateformBundle:Advert:delete
     requirements:
       id: \d+
-
 
 oc_plateform_view_slug:
     path: /{year}/{slug}.{_format}
