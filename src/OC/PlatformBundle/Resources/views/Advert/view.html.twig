@@ -9,6 +9,9 @@
 {% block ocplatform_body %}
 
   <h2>{{ advert.title }}</h2>
+    {% if advert.image is not null %}
+      <img height="60" width="150" src="{{ advert.image.url }}" alt="{{ advert.image.alt }}">
+    {% endif %}
   <i>Par {{ advert.author }}, le {{ advert.date|date('d/m/Y') }}</i>
 
   <div class="well">
